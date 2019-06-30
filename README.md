@@ -25,12 +25,20 @@ is marked for removal.
 Please note that such outlier detection methods are very simple, and 
 should not be used as the sole means out outlier detection. 
 
-  `eeg_file` = 'Filepath for the EEG file to be analyzed. Must be .mat format.'
-  `cfg`      = configuration parameters to be used in the analysis
-  `cfg.tapper` = The taper to be used for the sliding time window ('hann', 'hamming', 'gauss')
-  `cfg.timewin` = The width of the sliding time window, in ms.
-  `cfg.winstep` = How much the sliding time window should move across the EEG time course with each iteration, in ms.
-  `cfg.zthresh` = The z-score threshold to be used in outlier detection. Must be a positive number.
-  `cfg.pthresh` = The proportion of frequency bands on which a timepoint must exceed the z-threshold to be marked as an outlier for removal. Must be a number between 0 and 1.
+  `eeg_file`      = 'Filepath for the EEG file to be analyzed. Must be .mat format.'
+  
+  `cfg`           = configuration parameters to be used in the analysis
+  
+  `cfg.tapper`    = The taper to be used for the sliding time window ('hann', 'hamming', 'gauss')
+  
+  `cfg.timewin`   = The width of the sliding time window, in ms.
+  
+  `cfg.winstep`   = How much the sliding time window should move across the EEG time course with each iteration, in ms.
+  
+  `cfg.zthresh`   = The z-score threshold to be used in outlier detection. Must be a positive number.
+  
+  `cfg.pthresh`   = The proportion of frequency bands on which a timepoint must exceed the z-threshold to be marked as an outlier for removal. Must be a number between 0 and 1.
+  
   `cfg.outmethod` = The deviation statistic to be used when computing z-scores for outlier detection ('sd' or 'mad').
+  
   `cfg.freq_chans` = An array containing the channels to plot. 
